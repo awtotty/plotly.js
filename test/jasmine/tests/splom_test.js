@@ -776,7 +776,7 @@ describe('Test splom interactions:', function() {
     });
 });
 
-describe('Test splom update switchboard:', function() {
+describe('@noCI Test splom update switchboard:', function() {
     var gd;
 
     beforeEach(function() {
