@@ -445,7 +445,7 @@ describe('Test splom interactions:', function() {
         destroyGraphDiv();
     });
 
-    it('@gl should destroy gl objects on Plots.cleanPlot', function(done) {
+    it('@noCI @gl should destroy gl objects on Plots.cleanPlot', function(done) {
         var fig = Lib.extendDeep({}, require('@mocks/splom_large.json'));
 
         Plotly.plot(gd, fig).then(function() {
@@ -463,7 +463,7 @@ describe('Test splom interactions:', function() {
         .then(done);
     });
 
-    it('@gl when hasOnlyLargeSploms, should create correct regl-line2d data for grid', function(done) {
+    it('@noCI @gl when hasOnlyLargeSploms, should create correct regl-line2d data for grid', function(done) {
         var fig = Lib.extendDeep({}, require('@mocks/splom_large.json'));
         var cnt = 1;
 
@@ -517,7 +517,7 @@ describe('Test splom interactions:', function() {
         .then(done);
     });
 
-    it('@gl should update properly in-and-out of hasOnlyLargeSploms regime', function(done) {
+    it('@noCI @gl should update properly in-and-out of hasOnlyLargeSploms regime', function(done) {
         var figLarge = Lib.extendDeep({}, require('@mocks/splom_large.json'));
         var dimsLarge = figLarge.data[0].dimensions;
         var dimsSmall = dimsLarge.slice(0, 5);
@@ -776,7 +776,7 @@ describe('Test splom interactions:', function() {
     });
 });
 
-describe('@noCI Test splom update switchboard:', function() {
+describe('Test splom update switchboard:', function() {
     var gd;
 
     beforeEach(function() {
@@ -812,7 +812,7 @@ describe('@noCI Test splom update switchboard:', function() {
         return Array.prototype.slice.call(typedArray);
     }
 
-    it('@gl should trigger minimal sequence for axis range updates (large splom case)', function(done) {
+    it('@noCI @gl should trigger minimal sequence for axis range updates (large splom case)', function(done) {
         var fig = Lib.extendDeep({}, require('@mocks/splom_large.json'));
         var matrix, regl, splomGrid;
 
