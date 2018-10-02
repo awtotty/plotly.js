@@ -54,7 +54,7 @@ case $1 in
     jasmine2)
         set_tz
 
-        SHARDS=($(node $ROOT/tasks/shard_jasmine_tests.js --tag=gl))
+        SHARDS=($(node $ROOT/tasks/shard_jasmine_tests.js --tag=gl --limit=15))
 
         for s in ${SHARDS[@]}; do
             retry npm run test-jasmine -- "$s" --tags=gl --skip-tags=noCI
